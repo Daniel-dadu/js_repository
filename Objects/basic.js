@@ -22,6 +22,9 @@ myDog.food = "Purina";
 // Delete atributes
 delete myDog.bark;
 
+// Make object immutable (can't change)
+Object.freeze(myDog);
+
 console.log("\nObjeto perro al final: ")
 console.log(myDog);
 
