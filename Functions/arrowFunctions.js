@@ -44,3 +44,20 @@ var materialsLength2 = materials.map((material) => {
 var materialsLength3 = materials.map(material => material.length);
 
 // Fuente: https://youtu.be/22fyYvxz-do
+
+
+// Funciones que no reciben parámetros: Se le puede asignar valores por defecto a los parámetrs que no se reciben
+const misDatos = (name = "anonimo", edad = 0) => "Yo me llamo " + name + " y tengo " + edad + " años.";
+
+console.log("Función con parametros predeterminados: ");
+console.log(misDatos("daniel", 19));
+console.log(misDatos());
+
+
+// Rest Parameter: Permite recibir cualquier cantidad de parámetros (del tipo de dato que sean) y emplearlos
+// Todos los parámetros se convierten en un array
+const howMany = (...args) => "You have passed " + args.length + " arguments.";
+
+console.log("\nFunción con parametros Rest: ");
+console.log(howMany(0, 1, 2));
+console.log(howMany("string", null, [1, 2, 3], { }));
